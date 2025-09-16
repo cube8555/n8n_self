@@ -12,8 +12,10 @@ ENV N8N_BASIC_AUTH_ACTIVE=true
 ENV GENERIC_TIMEZONE=Asia/Seoul
 ENV TZ=Asia/Seoul
 
+
+# n8n 실행
 # 포트 노출
 EXPOSE 5678
 
-# n8n 실행
-CMD ["n8n", "start"]
+# n8n 실행 (전체 경로 지정)
+CMD ["node", "/usr/local/lib/node_modules/n8n/bin/n8n", "start"]
