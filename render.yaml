@@ -1,0 +1,17 @@
+services:
+  - type: web
+    name: n8n
+    env: docker
+    dockerfilePath: ./Dockerfile
+    plan: free
+    envVars:
+      - key: N8N_BASIC_AUTH_ACTIVE
+        value: "true"
+      - key: N8N_BASIC_AUTH_USER
+        value: "admin"
+      - key: N8N_BASIC_AUTH_PASSWORD
+        value: "gnflrk12!"
+      - key: N8N_HOST
+        value: "n8n-self-hosting-2utt.onrender.com"
+      - key: N8N_PORT
+        value: "5678"
